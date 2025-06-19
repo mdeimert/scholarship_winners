@@ -19,7 +19,7 @@ jobs:
       # Inject .env values
       - name: Set environment variables
         run: |
-          echo "NUXT_PUBLIC_API_BASE=${{ secrets.NUXT_PUBLIC_API_BASE }}" >> .env
+          echo "PUBLIC_API_BASE=${{ secrets.PUBLIC_API_BASE }}" >> .env
 
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
