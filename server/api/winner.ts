@@ -30,6 +30,12 @@ export default defineEventHandler(async (event) => {
   });
   const url = `${baseUrl}/winner?${queryString}`;
 
-  const response = await $fetch<JsonApiResponse<Winner>>(url);
+  const response = await $fetch<JsonApiResponse<Winner>>(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+      Accept: 'application/vnd.api+json',
+      Referer: 'https://scholarshipowl.com/',
+    },
+  });
   return response;
 });
