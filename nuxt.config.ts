@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
   ],
   site: {
+    url: 'https://scholarship-winners.example.com',
     name: 'Scholarship Winners',
     description: 'A showcase of scholarship winners and their achievements.',
     defaultLocale: 'en',
