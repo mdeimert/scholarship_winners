@@ -20,7 +20,7 @@ jobs:
       - name: Set environment variables
         run: |
           echo "PUBLIC_API_BASE=${{ secrets.PUBLIC_API_BASE }}" >> .env
-
+          echo "PUBLIC_BASE_URL=/scholarship_winners/" >> .env
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
